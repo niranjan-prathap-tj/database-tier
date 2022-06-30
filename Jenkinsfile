@@ -6,11 +6,6 @@ pipeline {
                 sh ''' sudo -H -c i21177 bash -c 'kubectl apply -f /mnt/c/Database-Tier/mysql-secret.yaml' '''
             }
         }
-        stage ('Deploy Storage') {
-            steps {
-                sh ''' sudo -H -c i21177 bash -c 'kubectl apply -f /mnt/c/Database-Tier/mysql-storage.yaml' '''
-            }
-        }
         stage ('Deploy Application') {
             steps {
                 sh ''' sudo -H -c i21177 bash -c 'kubectl apply -f /mnt/c/Database-Tier/mysqldeployment.yaml' '''
