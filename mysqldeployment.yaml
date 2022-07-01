@@ -32,7 +32,7 @@ spec:
       volumes:
       - name: mysql-persistent-storage
         awsElasticBlockStore:
-          volumeID: "vol-04d6ed2e2b4cbb954"
+          volumeID: "vol-0f21075ae80d1756f"
           fsType: ext4
         #persistentVolumeClaim:
           #claimName: mysql-pv-claim
