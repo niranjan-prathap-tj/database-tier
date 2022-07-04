@@ -31,8 +31,8 @@ spec:
           mountPath: /var/lib/mysql
       volumes:
       - name: mysql-persistent-storage
-        awsElasticBlockStore:
-          volumeID: "vol-0f21075ae80d1756f"
-          fsType: ext4
-        #persistentVolumeClaim:
-          #claimName: mysql-pv-claim
+        #awsElasticBlockStore:
+          #volumeID: "vol-0f21075ae80d1756f"
+          #fsType: ext4
+        persistentVolumeClaim:
+          claimName: mysql-pv-claim
